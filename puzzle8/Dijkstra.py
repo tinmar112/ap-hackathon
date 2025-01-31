@@ -18,7 +18,8 @@ def echanger (etat, pos1, pos2):
     return  ''.join (etat_liste) ## converti en str
 
 def dijkstra(etat_initial):
-    """Implémente l'algorithme de Dijkstra pour résoudre le puzzle """
+    """Implémente l'algorithme de Dijkstra pour résoudre le puzzle 8"""
+    
     pq = [(0, etat_initial)]  
     visites = set()
     visites.add(etat_initial)

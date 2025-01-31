@@ -3,7 +3,6 @@ import time
 
 from puzzle8.board import Board
 from puzzle8.Dijkstra import dijkstra
-from puzzle8.parser import read_args
 
 def widgets(page: ft.Page, squares):
     page.add(ft.GridView(squares))

@@ -1,13 +1,14 @@
 [tool.poetry]
 name = "puzzle8"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Puzzle 8 game, also known as Taquin"
+authors = ["Martin Zadora <martin.zadora@etu.minesparis.psl.eu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 numpy = "^2.2.2"
+flet = "^0.26.0"
 
 
 [build-system]

@@ -9,17 +9,23 @@ def game():
 
     board = Board(args.size)
 
-    etat_initial = str(board)
-    print(etat_initial)
-    etat_final = "123456780"
+    print("Puzzle de départ:")
+    print(board.show())
 
-    chemin = dijkstra(etat_initial, etat_final)
+    # Solving puzzle.
+    initial_state = str(board)
+    final_state = "123456780"
 
-    if chemin:
+    path = dijkstra(initial_state, final_state)
+
+    if path:
         print("Solution trouvée ! Voici les étapes :")
-        for etape in chemin:
-            print(etape)
+        for step in path:
+            step_list = []
+            for i in range(len(step)):
+                step_list.append(int(step[i]))
+            board.numbers = step_list
+            print(board.show())
+            
     else:
         print("Pas de solution trouvée.")
-
-    return(board.show())
